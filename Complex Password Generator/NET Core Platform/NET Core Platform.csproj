@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>PasswordGenerator</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>UI\ico.ico</ApplicationIcon>
+    <AssemblyName>PasswordGenerator</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <Authors>cyX GUG</Authors>
+    <Product />
+    <Company />
+    <StartupObject>NET_Core_Platform.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
