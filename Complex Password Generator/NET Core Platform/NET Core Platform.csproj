@@ -9,13 +9,15 @@
     <AssemblyName>PasswordGenerator</AssemblyName>
     <SignAssembly>false</SignAssembly>
     <Authors>cyX GUG</Authors>
-    <Product />
+    <Product>Password Generator</Product>
     <Company />
     <StartupObject>NET_Core_Platform.Program</StartupObject>
+    <PackageId>Password Generator</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
 
 </Project>

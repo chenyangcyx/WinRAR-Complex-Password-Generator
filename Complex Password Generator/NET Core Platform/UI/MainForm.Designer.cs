@@ -125,7 +125,7 @@
             this.input_label12.Location = new System.Drawing.Point(6, 606);
             this.input_label12.Name = "input_label12";
             this.input_label12.Size = new System.Drawing.Size(152, 24);
-            this.input_label12.TabIndex = 1;
+            this.input_label12.TabIndex = 33;
             this.input_label12.Text = "input_label12";
             this.input_label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -135,7 +135,7 @@
             this.input_label11.Location = new System.Drawing.Point(6, 553);
             this.input_label11.Name = "input_label11";
             this.input_label11.Size = new System.Drawing.Size(152, 24);
-            this.input_label11.TabIndex = 1;
+            this.input_label11.TabIndex = 30;
             this.input_label11.Text = "input_label11";
             this.input_label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -145,7 +145,7 @@
             this.input_label10.Location = new System.Drawing.Point(6, 500);
             this.input_label10.Name = "input_label10";
             this.input_label10.Size = new System.Drawing.Size(152, 24);
-            this.input_label10.TabIndex = 1;
+            this.input_label10.TabIndex = 27;
             this.input_label10.Text = "input_label10";
             this.input_label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -155,7 +155,7 @@
             this.input_label9.Location = new System.Drawing.Point(6, 447);
             this.input_label9.Name = "input_label9";
             this.input_label9.Size = new System.Drawing.Size(152, 24);
-            this.input_label9.TabIndex = 1;
+            this.input_label9.TabIndex = 24;
             this.input_label9.Text = "input_label9";
             this.input_label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -165,7 +165,7 @@
             this.input_label8.Location = new System.Drawing.Point(6, 394);
             this.input_label8.Name = "input_label8";
             this.input_label8.Size = new System.Drawing.Size(152, 24);
-            this.input_label8.TabIndex = 1;
+            this.input_label8.TabIndex = 21;
             this.input_label8.Text = "input_label8";
             this.input_label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -175,7 +175,7 @@
             this.input_label7.Location = new System.Drawing.Point(6, 341);
             this.input_label7.Name = "input_label7";
             this.input_label7.Size = new System.Drawing.Size(152, 24);
-            this.input_label7.TabIndex = 1;
+            this.input_label7.TabIndex = 18;
             this.input_label7.Text = "input_label7";
             this.input_label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -185,7 +185,7 @@
             this.input_label6.Location = new System.Drawing.Point(6, 288);
             this.input_label6.Name = "input_label6";
             this.input_label6.Size = new System.Drawing.Size(152, 24);
-            this.input_label6.TabIndex = 1;
+            this.input_label6.TabIndex = 15;
             this.input_label6.Text = "input_label6";
             this.input_label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -195,7 +195,7 @@
             this.input_label5.Location = new System.Drawing.Point(6, 235);
             this.input_label5.Name = "input_label5";
             this.input_label5.Size = new System.Drawing.Size(152, 24);
-            this.input_label5.TabIndex = 1;
+            this.input_label5.TabIndex = 12;
             this.input_label5.Text = "input_label5";
             this.input_label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -205,7 +205,7 @@
             this.input_label4.Location = new System.Drawing.Point(6, 182);
             this.input_label4.Name = "input_label4";
             this.input_label4.Size = new System.Drawing.Size(152, 24);
-            this.input_label4.TabIndex = 1;
+            this.input_label4.TabIndex = 9;
             this.input_label4.Text = "input_label4";
             this.input_label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -215,7 +215,7 @@
             this.input_label3.Location = new System.Drawing.Point(6, 129);
             this.input_label3.Name = "input_label3";
             this.input_label3.Size = new System.Drawing.Size(152, 24);
-            this.input_label3.TabIndex = 1;
+            this.input_label3.TabIndex = 6;
             this.input_label3.Text = "input_label3";
             this.input_label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -225,7 +225,7 @@
             this.input_text7.Location = new System.Drawing.Point(164, 341);
             this.input_text7.Name = "input_text7";
             this.input_text7.Size = new System.Drawing.Size(309, 24);
-            this.input_text7.TabIndex = 0;
+            this.input_text7.TabIndex = 19;
             // 
             // input_text8
             // 
@@ -233,7 +233,7 @@
             this.input_text8.Location = new System.Drawing.Point(164, 394);
             this.input_text8.Name = "input_text8";
             this.input_text8.Size = new System.Drawing.Size(309, 24);
-            this.input_text8.TabIndex = 2;
+            this.input_text8.TabIndex = 22;
             // 
             // input_text9
             // 
@@ -241,7 +241,7 @@
             this.input_text9.Location = new System.Drawing.Point(164, 447);
             this.input_text9.Name = "input_text9";
             this.input_text9.Size = new System.Drawing.Size(309, 24);
-            this.input_text9.TabIndex = 3;
+            this.input_text9.TabIndex = 25;
             // 
             // input_text10
             // 
@@ -249,7 +249,7 @@
             this.input_text10.Location = new System.Drawing.Point(164, 500);
             this.input_text10.Name = "input_text10";
             this.input_text10.Size = new System.Drawing.Size(309, 24);
-            this.input_text10.TabIndex = 4;
+            this.input_text10.TabIndex = 28;
             // 
             // input_text11
             // 
@@ -257,7 +257,7 @@
             this.input_text11.Location = new System.Drawing.Point(164, 553);
             this.input_text11.Name = "input_text11";
             this.input_text11.Size = new System.Drawing.Size(309, 24);
-            this.input_text11.TabIndex = 5;
+            this.input_text11.TabIndex = 31;
             // 
             // info_label7
             // 
@@ -265,7 +265,7 @@
             this.info_label7.Location = new System.Drawing.Point(164, 368);
             this.info_label7.Name = "info_label7";
             this.info_label7.Size = new System.Drawing.Size(309, 23);
-            this.info_label7.TabIndex = 6;
+            this.info_label7.TabIndex = 20;
             this.info_label7.Text = "info_label7";
             this.info_label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -275,7 +275,7 @@
             this.info_label8.Location = new System.Drawing.Point(164, 421);
             this.info_label8.Name = "info_label8";
             this.info_label8.Size = new System.Drawing.Size(309, 23);
-            this.info_label8.TabIndex = 7;
+            this.info_label8.TabIndex = 23;
             this.info_label8.Text = "info_label8";
             this.info_label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -285,7 +285,7 @@
             this.info_label9.Location = new System.Drawing.Point(164, 474);
             this.info_label9.Name = "info_label9";
             this.info_label9.Size = new System.Drawing.Size(309, 23);
-            this.info_label9.TabIndex = 8;
+            this.info_label9.TabIndex = 26;
             this.info_label9.Text = "info_label9";
             this.info_label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -295,7 +295,7 @@
             this.info_label10.Location = new System.Drawing.Point(164, 527);
             this.info_label10.Name = "info_label10";
             this.info_label10.Size = new System.Drawing.Size(309, 23);
-            this.info_label10.TabIndex = 9;
+            this.info_label10.TabIndex = 29;
             this.info_label10.Text = "info_label10";
             this.info_label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -305,7 +305,7 @@
             this.info_label11.Location = new System.Drawing.Point(164, 580);
             this.info_label11.Name = "info_label11";
             this.info_label11.Size = new System.Drawing.Size(309, 23);
-            this.info_label11.TabIndex = 10;
+            this.info_label11.TabIndex = 32;
             this.info_label11.Text = "info_label11";
             this.info_label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -315,7 +315,7 @@
             this.info_label12.Location = new System.Drawing.Point(164, 633);
             this.info_label12.Name = "info_label12";
             this.info_label12.Size = new System.Drawing.Size(309, 23);
-            this.info_label12.TabIndex = 10;
+            this.info_label12.TabIndex = 35;
             this.info_label12.Text = "info_label12";
             this.info_label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -325,7 +325,7 @@
             this.input_text12.Location = new System.Drawing.Point(164, 606);
             this.input_text12.Name = "input_text12";
             this.input_text12.Size = new System.Drawing.Size(309, 24);
-            this.input_text12.TabIndex = 5;
+            this.input_text12.TabIndex = 34;
             // 
             // input_text6
             // 
@@ -333,7 +333,7 @@
             this.input_text6.Location = new System.Drawing.Point(164, 288);
             this.input_text6.Name = "input_text6";
             this.input_text6.Size = new System.Drawing.Size(309, 24);
-            this.input_text6.TabIndex = 5;
+            this.input_text6.TabIndex = 16;
             // 
             // info_label6
             // 
@@ -341,7 +341,7 @@
             this.info_label6.Location = new System.Drawing.Point(164, 315);
             this.info_label6.Name = "info_label6";
             this.info_label6.Size = new System.Drawing.Size(309, 23);
-            this.info_label6.TabIndex = 10;
+            this.info_label6.TabIndex = 17;
             this.info_label6.Text = "info_label6";
             this.info_label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -351,7 +351,7 @@
             this.input_label2.Location = new System.Drawing.Point(6, 76);
             this.input_label2.Name = "input_label2";
             this.input_label2.Size = new System.Drawing.Size(152, 24);
-            this.input_label2.TabIndex = 1;
+            this.input_label2.TabIndex = 3;
             this.input_label2.Text = "input_label2";
             this.input_label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -361,7 +361,7 @@
             this.info_label5.Location = new System.Drawing.Point(164, 262);
             this.info_label5.Name = "info_label5";
             this.info_label5.Size = new System.Drawing.Size(309, 23);
-            this.info_label5.TabIndex = 10;
+            this.info_label5.TabIndex = 14;
             this.info_label5.Text = "info_label5";
             // 
             // info_label4
@@ -370,7 +370,7 @@
             this.info_label4.Location = new System.Drawing.Point(164, 209);
             this.info_label4.Name = "info_label4";
             this.info_label4.Size = new System.Drawing.Size(309, 23);
-            this.info_label4.TabIndex = 9;
+            this.info_label4.TabIndex = 11;
             this.info_label4.Text = "info_label4";
             this.info_label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -390,7 +390,7 @@
             this.info_label2.Location = new System.Drawing.Point(164, 103);
             this.info_label2.Name = "info_label2";
             this.info_label2.Size = new System.Drawing.Size(309, 23);
-            this.info_label2.TabIndex = 7;
+            this.info_label2.TabIndex = 5;
             this.info_label2.Text = "info_label2";
             this.info_label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -400,7 +400,7 @@
             this.info_label1.Location = new System.Drawing.Point(164, 50);
             this.info_label1.Name = "info_label1";
             this.info_label1.Size = new System.Drawing.Size(309, 23);
-            this.info_label1.TabIndex = 6;
+            this.info_label1.TabIndex = 2;
             this.info_label1.Text = "info_label1";
             this.info_label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -410,7 +410,7 @@
             this.input_text5.Location = new System.Drawing.Point(164, 235);
             this.input_text5.Name = "input_text5";
             this.input_text5.Size = new System.Drawing.Size(309, 24);
-            this.input_text5.TabIndex = 5;
+            this.input_text5.TabIndex = 13;
             // 
             // input_text4
             // 
@@ -418,7 +418,7 @@
             this.input_text4.Location = new System.Drawing.Point(164, 182);
             this.input_text4.Name = "input_text4";
             this.input_text4.Size = new System.Drawing.Size(309, 24);
-            this.input_text4.TabIndex = 4;
+            this.input_text4.TabIndex = 10;
             // 
             // input_text3
             // 
@@ -426,7 +426,7 @@
             this.input_text3.Location = new System.Drawing.Point(164, 129);
             this.input_text3.Name = "input_text3";
             this.input_text3.Size = new System.Drawing.Size(309, 24);
-            this.input_text3.TabIndex = 3;
+            this.input_text3.TabIndex = 7;
             // 
             // input_text2
             // 
@@ -434,7 +434,7 @@
             this.input_text2.Location = new System.Drawing.Point(164, 76);
             this.input_text2.Name = "input_text2";
             this.input_text2.Size = new System.Drawing.Size(309, 24);
-            this.input_text2.TabIndex = 2;
+            this.input_text2.TabIndex = 4;
             // 
             // input_label1
             // 
@@ -442,7 +442,7 @@
             this.input_label1.Location = new System.Drawing.Point(6, 23);
             this.input_label1.Name = "input_label1";
             this.input_label1.Size = new System.Drawing.Size(152, 24);
-            this.input_label1.TabIndex = 1;
+            this.input_label1.TabIndex = 0;
             this.input_label1.Text = "input_label1";
             this.input_label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -452,7 +452,7 @@
             this.input_text1.Location = new System.Drawing.Point(164, 23);
             this.input_text1.Name = "input_text1";
             this.input_text1.Size = new System.Drawing.Size(309, 24);
-            this.input_text1.TabIndex = 0;
+            this.input_text1.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -475,7 +475,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(351, 316);
-            this.textBox2.TabIndex = 0;
+            this.textBox2.TabIndex = 3;
             // 
             // label2
             // 
@@ -483,7 +483,7 @@
             this.label2.Location = new System.Drawing.Point(6, 267);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(351, 24);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -495,7 +495,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(351, 214);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -503,7 +503,7 @@
             this.label1.Location = new System.Drawing.Point(6, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(351, 24);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -517,7 +517,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "PasswordGenerator";
+            this.Text = "Password Generator";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
