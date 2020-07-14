@@ -88,7 +88,13 @@ namespace NET_Framwork_Platform
         // 复制文本
         private void button2_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(result_textBox2.Text);
+            if (result_textBox2.Text.Length!=0)
+                Clipboard.SetText(result_textBox2.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
