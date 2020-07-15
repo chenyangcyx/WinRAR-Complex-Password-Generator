@@ -12,7 +12,7 @@ namespace PasswordGenerator.Code
         public string GetBase64(string str)
         {
             byte[] buffer = new UTF8Encoding(false).GetBytes(str);
-            return Convert.ToBase64String(buffer);
+            return Convert.ToBase64String(buffer).ToLower();
         }
 
         public string GetMD5(string str)
