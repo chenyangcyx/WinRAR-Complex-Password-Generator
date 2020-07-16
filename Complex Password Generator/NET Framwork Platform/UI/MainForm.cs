@@ -1,12 +1,5 @@
 ﻿using PasswordGenerator.Code;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NET_Framwork_Platform
@@ -88,26 +81,26 @@ namespace NET_Framwork_Platform
         // 复制文本
         private void button2_Click(object sender, EventArgs e)
         {
-            if (result_textBox2.Text.Length!=0)
+            if (result_textBox2.Text.Length != 0)
                 Clipboard.SetText(result_textBox2.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string[] all_input = new string[12];
-            all_input[0] = input_text1.Text;
-            all_input[1] = input_text2.Text;
-            all_input[2] = input_text3.Text;
-            all_input[3] = input_text4.Text;
-            all_input[4] = input_text5.Text;
-            all_input[5] = input_text6.Text;
-            all_input[6] = input_text7.Text;
-            all_input[7] = input_text8.Text;
-            all_input[8] = input_text9.Text;
-            all_input[9] = input_text10.Text;
-            all_input[10] = input_text11.Text;
-            all_input[11] = input_text12.Text;
-
+            all_input[0] = input_text1.Text.Trim();
+            all_input[1] = input_text2.Text.Trim();
+            all_input[2] = input_text3.Text.Trim();
+            all_input[3] = input_text4.Text.Trim();
+            all_input[4] = input_text5.Text.Trim();
+            all_input[5] = input_text6.Text.Trim();
+            all_input[6] = input_text7.Text.Trim();
+            all_input[7] = input_text8.Text.Trim();
+            all_input[8] = input_text9.Text.Trim();
+            all_input[9] = input_text10.Text.Trim();
+            all_input[10] = input_text11.Text.Trim();
+            all_input[11] = input_text12.Text.Trim();
+            new PasswordGenerate().Generate(all_input, result_textBox1, result_textBox2);
         }
     }
 }

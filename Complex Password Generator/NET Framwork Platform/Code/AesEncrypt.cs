@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PasswordGenerator.Code
 {
@@ -41,7 +36,7 @@ namespace PasswordGenerator.Code
 
             // 定义初始密码和向量的byte数据
             byte[] aes_password = global.DEFAULT_ENCODING.GetBytes(password);
-            byte[] aes_iv = global.DEFAULT_ENCODING.GetBytes(password);
+            byte[] aes_iv = global.DEFAULT_ENCODING.GetBytes(password.Substring(0, 16));
 
             // 开始AES加密
             byte[] encrypt_text;
@@ -49,6 +44,7 @@ namespace PasswordGenerator.Code
             {
                 aesAlg.Key = aes_password;
                 aesAlg.IV = aes_iv;
+                aesAlg.BlockSize = 16 * 8;
                 aesAlg.KeySize = aes_password.Length * 8;
                 aesAlg.Padding = PaddingMode.PKCS7;
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);

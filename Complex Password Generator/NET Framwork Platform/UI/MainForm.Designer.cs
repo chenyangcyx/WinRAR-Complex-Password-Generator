@@ -488,18 +488,18 @@
             // 
             // result_textBox2
             // 
-            this.result_textBox2.Location = new System.Drawing.Point(6, 296);
+            this.result_textBox2.Location = new System.Drawing.Point(6, 511);
             this.result_textBox2.Multiline = true;
             this.result_textBox2.Name = "result_textBox2";
             this.result_textBox2.ReadOnly = true;
             this.result_textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.result_textBox2.Size = new System.Drawing.Size(353, 316);
+            this.result_textBox2.Size = new System.Drawing.Size(353, 101);
             this.result_textBox2.TabIndex = 3;
             // 
             // result_label2
             // 
             this.result_label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.result_label2.Location = new System.Drawing.Point(6, 269);
+            this.result_label2.Location = new System.Drawing.Point(6, 484);
             this.result_label2.Name = "result_label2";
             this.result_label2.Size = new System.Drawing.Size(353, 24);
             this.result_label2.TabIndex = 2;
@@ -512,7 +512,7 @@
             this.result_textBox1.Name = "result_textBox1";
             this.result_textBox1.ReadOnly = true;
             this.result_textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.result_textBox1.Size = new System.Drawing.Size(353, 214);
+            this.result_textBox1.Size = new System.Drawing.Size(353, 429);
             this.result_textBox1.TabIndex = 1;
             // 
             // result_label1
