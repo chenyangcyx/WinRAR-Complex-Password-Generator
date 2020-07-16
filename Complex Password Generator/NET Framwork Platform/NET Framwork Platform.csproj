@@ -49,12 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\AesEncrypt.cs" />
     <Compile Include="Code\GlobalData.cs" />
     <Compile Include="Code\Hash.cs" />
     <Compile Include="Code\InputSetting.cs" />
     <Compile Include="Code\PasswordGenerate.cs" />
-    <Compile Include="Code\RSAEncrypt.cs" />
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

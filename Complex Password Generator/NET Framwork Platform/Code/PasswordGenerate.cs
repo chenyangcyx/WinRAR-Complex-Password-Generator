@@ -6,13 +6,13 @@ namespace PasswordGenerator.Code
 {
     class PasswordGenerate
     {
-        string public_key;
+        string key;
 
         // 从文件中读取公钥、私钥
         private void ReadKeyContent()
         {
             StreamReader sr = new StreamReader(GlobalData.gd.KEY_FILE_NAME, GlobalData.gd.DEFAULT_ENCODING);
-            public_key = sr.ReadLine();
+            key = sr.ReadToEnd().Trim();
             sr.Close();
         }
 
@@ -45,13 +45,11 @@ namespace PasswordGenerator.Code
         public void Generate(string[] all_input, TextBox textBox1, TextBox textBox2)
         {
             Hash hash = new Hash();
-            AesEncrypt aes = new AesEncrypt();
-            RSAEncrypt rsa = new RSAEncrypt();
             // 将输入内容全部转换成base64并进行sha-512 hash
             string[] all_input_base64_sha512 = new string[12];
             for (int i = 0; i < 12; i++)
                 all_input_base64_sha512[i] = hash.GetSHA512(hash.GetBase64(all_input[i]));
-            // 第一轮置换，字符串的自hash
+            // 第一轮置换，字符串的随机自hash
             string[] deal1 = new string[12];
             for (int i = 0; i < 12; i++)
                 deal1[i] = string.Copy(all_input_base64_sha512[i]);
@@ -68,27 +66,33 @@ namespace PasswordGenerator.Code
                     }
                 }
             }
-            // 第二轮置换，字符串的自aes
+            // 第二轮置换，字符串的循环自hash
             string[] deal2 = new string[12];
             for (int i = 0; i < 12; i++)
                 deal2[i] = string.Copy(deal1[i]);
             for (int i = 0; i < 12; i++)
             {
-                char[] temp_str = deal1[i].ToCharArray();
+                char[] temp_str = deal2[i].ToCharArray();
                 foreach (char ch in temp_str)
                 {
                     int value = GetIntValue(ch);
                     while (value > 0)
                     {
-                        deal2[i] = GetHashByMode(aes.GetAesEncrypt(deal2[i], deal2[i]), value * value);
+                        deal2[i] = hash.GetMD5(deal2[i]);
+                        deal2[i] = hash.GetSHA1(deal2[i]);
+                        deal2[i] = hash.GetSHA256(deal2[i]);
+                        deal2[i] = hash.GetSHA384(deal2[i]);
+                        deal2[i] = hash.GetSHA512(deal2[i]);
                         value--;
                     }
                 }
             }
-            // 第三轮，字符串的拼接
+            // 第三轮，字符串与key的拼接
             StringBuilder stringBuilder3 = new StringBuilder();
             foreach (string str in deal2)
                 stringBuilder3.Append(str);
+            ReadKeyContent();
+            stringBuilder3.Append(hash.GetSHA512(key));
             string deal3 = stringBuilder3.ToString();
             // 第四轮，字符串的重新编码
             StringBuilder stringBuilder4 = new StringBuilder();
@@ -96,11 +100,11 @@ namespace PasswordGenerator.Code
             foreach (char ch in str_array4)
             {
                 int value = GetIntValue(ch);
-                string result = (value * 7 * 329 * 1117).ToString("x");
-                stringBuilder4.Append(GetHashByMode(result, value * value));
+                string result_4 = (value * 7 * 329 * 1117).ToString("x");
+                stringBuilder4.Append(GetHashByMode(result_4, value * value));
             }
             string deal4 = stringBuilder4.ToString();
-            // 第五轮，字符串的选择加密
+            // 第五轮，字符串的选择hash
             string[] temp5_deal1_1 = new string[12];
             string[] temp5_deal2_1 = new string[12];
             for (int i = 0; i < 12; i++)
@@ -118,7 +122,7 @@ namespace PasswordGenerator.Code
                     int value = GetIntValue(ch);
                     while (value > 0)
                     {
-                        deal5 = GetHashByMode(aes.GetAesEncrypt(deal5, temp5_deal2_1[i]), value * value);
+                        deal5 = GetHashByMode(deal5, value * value);
                         value--;
                     }
                 }
@@ -127,7 +131,7 @@ namespace PasswordGenerator.Code
                     int value = GetIntValue(ch);
                     while (value > 0)
                     {
-                        deal5 = GetHashByMode(aes.GetAesEncrypt(deal5, temp5_deal1_1[i]), value * value);
+                        deal5 = GetHashByMode(deal5, value * value);
                         value--;
                     }
                 }
@@ -142,22 +146,27 @@ namespace PasswordGenerator.Code
                 stringBuilder6.Append(GetHashByMode(split6.Substring(i, value), value * value));
             }
             string deal6 = stringBuilder6.ToString();
-            // 第七轮，字符串的迭代自aes
-            StringBuilder stringBuilder7 = new StringBuilder();
-            string split7 = deal6 + deal6;
-            char[] count7 = deal6.ToCharArray();
-            for (int i = 0; i < count7.Length; i++)
+            // 第七轮，字符串的迭代自随机hash
+            string deal7 = string.Copy(deal6);
+            char[] deal7_array = deal7.ToCharArray();
+            foreach (char ch in deal7_array)
             {
-                int value = GetIntValue(count7[i]);
-                stringBuilder7.Append(aes.GetAesEncrypt(split7.Substring(i, value), deal1[value % 12]));
+                int value = GetIntValue(ch);
+                while (value > 0)
+                {
+                    deal7 = hash.GetSHA512(deal7 + key);
+                    value--;
+                }
             }
-            string deal7_pre = stringBuilder7.ToString();
-            string deal7 = hash.GetMD5(deal7_pre) + hash.GetSHA1(deal7_pre) + hash.GetSHA256(deal7_pre) + hash.GetSHA384(deal7_pre) + hash.GetSHA512(deal7_pre);
+            string result = hash.GetMD5(deal7) + hash.GetSHA1(deal7) + hash.GetSHA256(deal7) + hash.GetSHA384(deal7) + hash.GetSHA512(deal7);
             // 显示处理的密钥
-            ReadKeyContent();
-            string rsa_result = rsa.GetRSAEncrypt(public_key, deal7);
-            textBox1.Text = "-------plain text-------\r\n" + deal7 + "\r\n\r\n-------rsa result-------\r\n" + rsa_result;
-            textBox2.Text = rsa_result.Substring(rsa_result.Length / 2, 127);
+            textBox1.Text = "-------plain text-------\r\n" + deal7 + "\r\n\r\n-------hash result-------\r\n" + result;
+            StringBuilder result_password_builder = new StringBuilder();
+            result_password_builder.Append(result.Substring(2, 20));
+            result_password_builder.Append(result.Substring(7, 70));
+            result_password_builder.Append(result.Substring(22, 20));
+            result_password_builder.Append(result.Substring(77, 17));
+            textBox2.Text = result_password_builder.ToString();
         }
     }
 }
