@@ -136,17 +136,16 @@ namespace PasswordGenerator.Code
                     }
                 }
             }
-            // 第六轮，字符串的迭代自hash
-            StringBuilder stringBuilder6 = new StringBuilder();
+            // 第六轮，字符串的迭代自随机hash
             string split6 = deal5 + deal5;
             char[] count6 = deal5.ToCharArray();
+            string deal6 = string.Copy(deal5);
             for (int i = 0; i < count6.Length; i++)
             {
                 int value = GetIntValue(count6[i]);
-                stringBuilder6.Append(GetHashByMode(split6.Substring(i, value), value * value));
+                deal6 = GetHashByMode(split6.Substring(i, value), value * value);
             }
-            string deal6 = stringBuilder6.ToString();
-            // 第七轮，字符串的迭代自随机hash
+            // 第七轮，字符串的组合迭代自hash
             string deal7 = string.Copy(deal6);
             char[] deal7_array = deal7.ToCharArray();
             foreach (char ch in deal7_array)
